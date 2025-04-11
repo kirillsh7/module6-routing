@@ -1,0 +1,28 @@
+{
+  "todos": [
+    {
+      "id": 2,
+      "task": "npm create vite@latest name-of-your-project -- --template react # follow prompts cd <your new project directory> npm install react-router-dom # always need this! npm install localforage match-sorter sort-by # only for this tutorial. npm run dev",
+      "completed": false,
+      "isEditing": false
+    },
+    {
+      "id": 3,
+      "task": "Обед",
+      "completed": false,
+      "isEditing": false
+    },
+    {
+      "task": "Frontendd",
+      "completed": false,
+      "isEditing": false,
+      "id": 4
+    },
+    {
+      "task": "dd",
+      "completed": false,
+      "isEditing": false,
+      "id": 5
+    }
+  ]
+}
