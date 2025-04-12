@@ -1,6 +1,4 @@
 import React, { useEffect, useState, useRef } from 'react'
-import { MdDeleteOutline } from 'react-icons/md'
-import { MdModeEditOutline } from 'react-icons/md'
 
 const Todo = ({ todo, toggleComplete }) => {
 	const [displayedTask, setDisplayedTask] = useState('')

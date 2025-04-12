@@ -10,6 +10,7 @@ const TodoEdit = () => {
 	const getTodo = async () => {
 		const response = await fetch('http://localhost:3000/todos/' + id)
 		const data = await response.json()
+
 		setData(data)
 	}
 	useEffect(() => {

@@ -16,20 +16,9 @@ const TodoWrapper = () => {
 	useEffect(() => {
 		getTodos(searchPhrase)
 	}, [isAlphabetSorting, searchPhrase])
-
 	const addTodo = async todo => {
 		await createTodo({ task: todo, completed: false, isEditing: false })
-		getTodos()
-	}
-
-	const changeIsEditing = todoIndex => {
-		setTodos(
-			todos.map(todo => {
-				return todoIndex === todo.id
-					? { ...todo, isEditing: !todo.isEditing }
-					: todo
-			})
-		)
+		await getTodos()
 	}
 
 	const toggleComplete = todoIndex => {
@@ -70,12 +59,11 @@ const TodoWrapper = () => {
 					/>
 				</div>
 
-				{todos.map((todo, index) => (
+				{todos.map(todo => (
 					<Todo
-						changeIsEditing={changeIsEditing}
 						toggleComplete={toggleComplete}
 						todo={todo}
-						key={index}
+						key={todo.id}
 					/>
 				))}
 			</div>

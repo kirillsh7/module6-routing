@@ -25,7 +25,6 @@ const fetchServer = (method, { id, ...payload } = {}) => {
 			options.body = JSON.stringify(payload)
 		}
 	}
-	console.log(url)
 	return fetch(url, options).then(jsonData => jsonData.json())
 }
 
